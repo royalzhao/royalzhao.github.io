@@ -16,7 +16,7 @@ owner:
 gavatar: img/favicon.ico
 favicon: img/favicon.png
 
-douban_username:  
+jainshu_username:dd2f8b08d41e  
 twitter_username: 
 github_username: royalzhao
 weibo_username: Mr赵先生0_0
@@ -44,7 +44,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "hanson"
+      author: "Mr.zhao"
       header-img: "img/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Analytics and webmaster tools stuff goes here
