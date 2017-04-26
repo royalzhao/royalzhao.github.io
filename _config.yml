@@ -13,7 +13,7 @@ owner:
   bio: ""
 
 # Data
-gavatar: http://dreamofbook.qiniudn.com/Az..png
+gavatar: img/favicon.png
 favicon: img/favicon.png
 
 douban_username:  
@@ -46,14 +46,6 @@ defaults:
       layout: "post"
       author: "hanson"
       header-img: "img/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
-
-# Comments 
-comments :
-  provider : duoshuo
-  duoshuo :
-    short_name : hanson
-  disqus :
-      short_name : hanson
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 
