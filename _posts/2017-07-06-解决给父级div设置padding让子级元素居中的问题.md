@@ -32,6 +32,7 @@
     
     </body>
     </html>  
+    
 我们想让这个蓝色的小块水平垂直居中，不考虑其它方法，只用padding的方式，设置padding值，让它可以水平垂直居中，发现无论怎么设置padding的值都无法让它居中，且父级div还会越来越大，如图  
 ![](/img/css3_padding2.png)  
 那么重点来了，只要设置box-sizing: border-box;就可以解决父级div不断变大的问题，css样式如下  
@@ -52,6 +53,7 @@
     	background: #3399FF;
     }
     </style>  
+    
 结果如图  
 ![](/img/css3_padding3.png)  
 下面只要我们设置padding为70px,就可以让它垂直居中啦，是不是很给力啊！  
