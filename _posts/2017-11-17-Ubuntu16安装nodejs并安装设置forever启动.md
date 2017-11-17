@@ -3,7 +3,7 @@
 [forever让nodejs应用后台执行 ](http://cnodejs.org/topic/5021c2cff767cc9a51e684e3)  
 
 # 安装最新版nodejs
-###更新ubuntu软件源
+### 更新ubuntu软件源
 
     sudo apt-get update
     sudo apt-get install -y python-software-properties software-properties-common
@@ -35,7 +35,7 @@
 
     node -v
 
-#安装forever  
+# 安装forever  
     $ sudo npm install forever -g   #安装
     $ forever start app.js  #启动
     $ forever stop app.js   #关闭
