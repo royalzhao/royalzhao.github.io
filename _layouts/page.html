@@ -1,36 +1,48 @@
 ---
 layout: default
+current: page
+class: page-template
+disqus: false
 ---
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-            </div>
-        </div>
+<!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer">
+    <div class="inner">
+        {% include site-nav.html %}
     </div>
 </header>
 
-<link rel="stylesheet" href="/css/backtop.css">  <!-- Back Top -->
-<script type="text/javascript" src="/js/backtop.js"></script>  <!-- Back Top -->
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
 
-<div id="back-top">
-  <a href="#top" title="回到顶部"></a>
-</div>
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			{{ content }}
-		</div>
-	</div>
-</div>
+        <article class="post-full {{ page.subclass }} {% unless page.cover %}no-image{% endunless %}">
 
-<hr>
+            <header class="post-full-header">
+                <h1 class="post-full-title">{{ page.title }}</h1>
+            </header>
+
+            {% if page.cover %}
+            <figure class="post-full-image" style="background-image: url({{ site.baseurl }}{{ page.cover }})">
+            </figure>
+            {% endif %}
+
+            <section class="post-full-content">
+                {{ content }}
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+{% include page-scripts.html %}

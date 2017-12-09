@@ -1,41 +1,39 @@
 ---
-layout: page
-description: "Mr.zhao's World"
+layout: default
+current: home
+class: 'home-template'
+navigation: True
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:150 }}
+<!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {% if site.logo %}
+                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </h1>
+            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
         </div>
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
+        {% include site-nav.html %}
+    </div>
+</header>
 
-<hr>
-{% endfor %}
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            {%  include post-card.html %}
+        </div>
+
+    </div>
+</main>
