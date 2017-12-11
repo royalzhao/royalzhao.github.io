@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Ubuntu16安装nodejs并安装设置forever启动"
+date: 2017-11-17  
+description: ""
+tag: forever
+---
+
 在公司原有tomcat环境下想安装nodejs环境进行开发，因为本人是前端工程师，故此参考一些别人的博客简书写下这篇文章，原文链接如下  
 [Ubuntu16.04安装最新版nodejs ](http://www.jianshu.com/p/2b24cd430a7d)     
 [forever让nodejs应用后台执行 ](http://cnodejs.org/topic/5021c2cff767cc9a51e684e3)  

@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Linux下安装nginx与php"
+date: 2017-11-25  
+description: ""
+tag: nginx
+---
+
 本人是centos的服务器，下面教大家配置ngnix服务器并搭建php的运行环境  
 ## 1、安装ngnix  
     yum install nginx  

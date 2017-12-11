@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Nodejs+angularjs结合multiparty实现多图片上传"
+date: 2017-09-27  
+description: ""
+tag: multiparty
+---
+
 这次我们说一下nodejs+angularjs多图片上传的问题  
 此前也在网站看了很多篇文章，有关的内容说多不多，说少也不少，但我一一试过以后有成功的，也有没有成功的，折磨了我很长时间，最终也是成功实现了，于是想写下这篇文章，分享我的代码，也希望后人不要踏进我的坑。    
 

@@ -1,4 +1,11 @@
-#解决给父级div设置padding让子级元素居中的问题  
+---
+layout: post
+title: "解决给父级div设置padding让子级元素居中的问题"
+date: 2017-07-06  
+description: ""
+tag: padding
+---
+
 在做网页过程中，我们常常会遇到让子级块状div居中的问题，如下图  
 ![](/img/css3_padding1.png)  
 代码  

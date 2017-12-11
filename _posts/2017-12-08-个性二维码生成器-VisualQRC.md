@@ -1,3 +1,11 @@
+---
+layout: post
+title: "个性二维码生成器 Visualqrc"
+date: 2017-12-08  
+description: ""
+tag: Visualqrc
+---
+
 ## 话不多说，先上图  
 ![原图](http://ouyti5jhg.bkt.clouddn.com/img/ii.jpg)
 ![二维码](http://ouyti5jhg.bkt.clouddn.com/img/iui.jpeg)  
