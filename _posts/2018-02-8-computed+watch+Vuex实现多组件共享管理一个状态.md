@@ -1,3 +1,11 @@
+---
+layout: post
+title: "computed+watch+Vuex实现多组件共享管理一个状态"
+date: 2018-02-8  
+description: ""
+tag: Vuex
+---
+
  好久没有写博客了，就最近写的一些东西给大家做一个分享  
 要实现的就是这种效果  
 ![页面1](https://i.imgur.com/psgpiLR.png)  
